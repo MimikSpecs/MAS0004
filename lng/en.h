@@ -10,4 +10,6 @@
  * See MAS=0002 : Mimik License 2023 For More Information
 */
 
+static const char *CAT_ERROR_0 = "File does not exist.";
+
 #endif

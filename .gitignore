@@ -3,3 +3,5 @@ bin/
 
 makefile
 inc/lang.h
+
+*.nokeep

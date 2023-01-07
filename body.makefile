@@ -30,6 +30,8 @@ clean:
 	rm -f ./obj/*
 	echo "RM    | ./inc/lang.h"
 	rm -f ./inc/lang.h
+	echo "RM    | ./*.nokeep"
+	rm  -f ./*.nokeep
 
 ./bin/cat: ./obj/cat.o
 	echo "CC LD | ./bin/cat"
