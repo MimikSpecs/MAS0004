@@ -34,7 +34,7 @@ This follow the POSIX Man Pages for the applications see Man 1P instead of Man 1
  - [ ] b2sum, computes and checks BLAKE2b message digest
  - [ ] base32, encodes or decodes Base32, and prints result to standard output
  - [ ] base64, encodes or decodes Base64, and prints result to standard output
- - [ ] cat, concatenates and prints files on the standard output
+ - [x] cat, concatenates and prints files on the standard output
  - [ ] cksum, checksums (IEEE Ethernet CRC-32) and count the bytes in a file
  - [ ] comm, compares two sorted files line by line
  - [ ] csplit, splits a file into sections determined by context lines

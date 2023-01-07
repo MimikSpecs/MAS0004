@@ -1,16 +1,16 @@
 build: ./bin/cat
-	# there is nothing to build
 
 strip: build
-	# there is nothing to optimize
+	strip -s ./bin/cat
 
 install: build
 	# there is nothing to build
+	install -m 0755 ./bin/cat ${bindir}/cat
 
 strip-install: build strip install
 
 uninstall:
-	# there is nothing to uninstall
+	rm ${bindir}/cat
 
 build-tests: build
 	# there are no tests to build
