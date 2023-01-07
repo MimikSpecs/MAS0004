@@ -241,6 +241,8 @@ ifndef VERBOSE
 .SILENT:
 endif
 
+.DEFAULT_GOAL=build
+
 list:
 	echo "bin dir  | \${bindir}"
 	echo "sbin dir | \${sbindir}"
