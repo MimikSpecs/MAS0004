@@ -1,0 +1,113 @@
+# MAS+0004 : Mimik Core Utilities
+
+Provide the GNU Core Utilities under the Mimik License ( MAS=0002 ) and philosophies.
+
+# Provided Applications
+
+ - [ ] chcon, changes file security context
+ - [ ] chgrp, changes file group ownership
+ - [ ] chown, changes file ownership
+ - [ ] chmod, changes the permissions of a file or directory
+ - [ ] cp, copies a file or directory
+ - [ ] dd, copies and converts a file
+ - [ ] df, shows disk free space on file systems
+ - [ ] dir, is exactly like `ls -C -b`, but files are by default listed in columns and sorted vertically
+ - [ ] dircolors, set up color for ls
+ - [ ] install, copies files and sets attributes
+ - [ ] ln, creates a link to a file
+ - [ ] ls, lists the files in a directory
+ - [ ] mkdir, creates a directory
+ - [ ] mkfifo, makes a named pipe (FIFO)
+ - [ ] mknod, makes a block or character special file
+ - [ ] mktemp, creates a temporary file or directory
+ - [ ] mv, moves files or renames files
+ - [ ] realpath, return the resolved absolute or relative path for a file
+ - [ ] rm, removes files, directories, device nodes, and symbolic links
+ - [ ] rmdir, removes empty directories
+ - [ ] shred, overwrites a file to hide it's contents, and optionally deletes it
+ - [ ] sync, flushes file system buffers
+ - [ ] touch, changes file timestamps; creates file
+ - [ ] truncate, shrink or extend the size of a file to the specified size
+ - [ ] vdir, it exactly like `ls -l -b`, but files are listed long format by default
+ - [ ] b2sum, computes and checks BLAKE2b message digest
+ - [ ] base32, encodes or decodes Base32, and prints result to standard output
+ - [ ] base64, encodes or decodes Base64, and prints result to standard output
+ - [ ] cat, concatenates and prints files on the standard output
+ - [ ] cksum, checksums (IEEE Ethernet CRC-32) and count the bytes in a file
+ - [ ] comm, compares two sorted files line by line
+ - [ ] csplit, splits a file into sections determined by context lines
+ - [ ] cut, removes section from each line of files
+ - [ ] expand, converts tabs to spaces
+ - [ ] fmt, simple optimal text formatter
+ - [ ] fold, wraps each input line to fit in specified width
+ - [ ] head, outputs the first part of files
+ - [ ] join, joins lines of two files on a common field
+ - [ ] md5sum, computes and checks MD5 message digest
+ - [ ] nl, numbers lines of files
+ - [ ] numfmt, reformat numbers
+ - [ ] od, dumps files in octal and other formats
+ - [ ] paste, merges lines of files
+ - [ ] ptx, produces a permuted index of file contents
+ - [ ] pr, converts text files for printing
+ - [ ] sha1sum, computes and checks SHA-1/SHA-2 message digests
+ - [ ] sha224sum, computes and checks SHA-1/SHA-2 message digests
+ - [ ] sha256sum, computes and checks SHA-1/SHA-2 message digests
+ - [ ] sha384sum, computes and checks SHA-1/SHA-2 message digests
+ - [ ] sha512sum, computes and checks SHA-1/SHA-2 message digests
+ - [ ] shuf, generate random permutations
+ - [ ] sort, sort lines of text files
+ - [ ] split, split a file into pieces
+ - [ ] sum, check sums and count the blocks in a file
+ - [ ] tac, concatenates and prints files in reverse order line by line
+ - [ ] tail, outputs the last part of files
+ - [ ] tr, translates or deletes characters
+ - [ ] tsort, performs a topological sort
+ - [ ] unexpand, converts spaces to tabs
+ - [ ] uniq, removes duplicate lines from a sorted file
+ - [ ] wc, prints the numbers of bytes, words, and lines in files
+ - [ ] arch, prints machine hardware name (same as uname -m)
+ - [ ] basename, removes the path prefix from a given path name
+ - [ ] chroot, changes the root directory
+ - [ ] date, prints or sets the system data and time
+ - [ ] dirname, strips, non-directory suffix from file name
+ - [ ] du, shows disk usage on file systems
+ - [ ] echo, displays a specified line of text
+ - [ ] env, displays and modifies environment variables
+ - [ ] expr, evaluates expressions
+ - [ ] factor, factors numbers
+ - [ ] false, does nothing, but exits unsuccessfully
+ - [ ] groups, prints the groups of which the user is a member
+ - [ ] hostid, prints the numeric identifier for the current host
+ - [ ] id, prints real of effective UID and GID
+ - [ ] link, creates a link to a file
+ - [ ] logname, print the user's login name
+ - [ ] nice, modifies scheduling priority
+ - [ ] nohup, allows a command to continue running after logging out
+ - [ ] nproc, queries the number of active processors
+ - [ ] pathchk, checks whether file names are valid or portable
+ - [ ] pinky, a lightweight version of finger
+ - [ ] printenv, prints environment variables
+ - [ ] printf, formats and prints data
+ - [ ] pwd, prints the current working directory
+ - [ ] readlink, displays value of a symbolic link
+ - [ ] runcon, run command with specified security context
+ - [ ] seq, prints a sequence of numbers
+ - [ ] sleep, delays for a specified amount of time
+ - [ ] stat, returns data about an inode
+ - [ ] stdbuf, controls buffering for commands that use stdio
+ - [ ] stty, changes and prints terminal line settings
+ - [ ] tee, sends output to multiple files
+ - [ ] test, evaluates an expression
+ - [ ] timeout, run a command with a time limit
+ - [ ] true, does nothing, but exits successfully
+ - [ ] tty, prints terminal name
+ - [ ] uname, prints system information
+ - [ ] unlink, remove the specified file using the unlink function
+ - [ ] uptime, tells how ling the system has been running
+ - [ ] users, prints the user names of users currently logged into the current host
+ - [ ] who, prints a list of all users currently logged in
+ - [ ] whoami, prints the effective userid
+ - [ ] yes, prints a string repeatedly
+ - [ ] [, a synonym for test; this program permits expressions like [ exptression ]
+
+For more info please see the [wiki](https://en.wikipedia.org/wiki/List_of_GNU_Core_Utilities_commands)
