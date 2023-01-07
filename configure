@@ -1,0 +1,261 @@
+#!/bin/sh
+
+# remove old makefile
+rm -f makefile
+
+# set variables
+if [ -z "$prefix" ]
+then
+	prefix=/
+fi
+
+if [ -z "$eprefix" ]
+then
+	eprefix=$prefix
+fi
+
+if [ -z "$uprefix" ]
+then
+	uprefix=/usr/
+fi
+
+if [ -z "$bindir" ]
+then
+	bindir=$eprefix/bin/
+fi
+
+if [ -z "$sbindir" ]
+then
+	sbindir=$eprefix/sbin/
+fi
+
+if [ -z "$libdir" ]
+then
+	libdir=$eprefix/lib/
+fi
+
+if [ -z "$srcdir" ]
+then
+	srcdir=$uprefix/src/
+fi
+
+if [ -z "$incdir" ]
+then
+	incdir=$uprefix/include/
+fi
+
+if [ -z "$docdir" ]
+then
+	docdir=$uprefix/share/doc/
+fi
+
+if [ -z "$mandir" ]
+then
+	mandir=$uprefix/share/man/
+fi
+
+if [ -z "$ldflags" ]
+then
+	ldflags="-O3 --gc-sections"
+fi
+
+if [ -z "$cflags" ]
+then
+	cflags="-std=c99 -Wall -Wextra -O3 -g -funsigned-char -m64"
+fi
+
+cflags="$cflags -I./inc"
+
+if [ -z "$ccldflags" ]
+then
+	ccldflags="-m64 -O3 -Wl,--gc-sections"
+fi
+
+if [ -z "$asflags" ]
+then
+	asflags="-g -O3"
+fi
+
+asflags="$asflags -I./inc"
+
+if [ -z "$ld" ]
+then
+	ld=/bin/ld
+fi
+
+if [ -z "$cc" ]
+then
+	cc=/bin/cc
+fi
+
+if [ -z "$ccld" ]
+then
+	ccld=/bin/cc
+fi
+
+if [ -z "$as" ]
+then
+	as=/bin/as
+fi
+
+# test variables
+
+if [ -d "$prefix" ]
+then
+	echo "Using prefix $prefix"
+else
+	echo "Prefix does not exist"
+	exit 1
+fi
+
+if [ -d "$eprefix" ]
+then
+	echo "Using eprefix $eprefix"
+else
+	echo "EPrefix does not exist"
+	exit 1
+fi
+
+if [ -d "$uprefix" ]
+then
+	echo "Using uprefix $uprefix"
+else
+	echo "UPrefix does not exist"
+	exit 1
+fi
+
+if [ -d "$bindir" ]
+then
+	echo "Using bindir $bindir"
+else
+	echo "Creating bindir $bindir"
+	mkdir "$bindir"
+fi
+
+if [ -d "$sbindir" ]
+then
+	echo "Using sbindir $sbindir"
+else
+	echo "Creating sbindir $sbindir"
+	mkdir "$sbindir"
+fi
+
+if [ -d "$libdir" ]
+then
+	echo "Using libdir $libdir"
+else
+	echo "Creating libdir $libdir"
+	mkdir "$libdir"
+fi
+
+if [ -d "$srcdir" ]
+then
+	echo "Using srcdir $srcdir"
+else
+	echo "Creating srcdir $srcdir"
+	mkdir "$srcdir"
+fi
+
+if [ -d "$incdir" ]
+then
+	echo "Using incdir $incdir"
+else
+	echo "Creating incdir $incdir"
+	mkdir "$incdir"
+fi
+
+if [ -d "$docdir" ]
+then
+	echo "Using docdir $docdir"
+else
+	echo "Creating docdir $docdir"
+	mkdir "$docdir"
+fi
+
+if [ -d "$mandir" ]
+then
+	echo "Using mandir $mandir"
+else
+	echo "Creating mandir $mandir"
+	mkdir "$mandir"
+fi
+
+if ! $ld $ldflags --help > /dev/null 2>&1
+then
+	echo "linker command \`$ld $ldflags --help', returned error"
+	exit 1
+else
+	echo "linker command \`$ld $ldflags --help', return success"
+fi
+
+if ! $cc $cflags --help > /dev/null 2>&1
+then
+	echo "c compiler command \`$cc $cflags --help', returned error"
+	exit 1
+else
+	echo "c compiler command \`$cc $cflags --help', return success"
+fi
+
+if ! $ccld $ccldflags --help > /dev/null 2>&1
+then
+	echo "c linker command \`$ccld $ccldflags --help', returned error"
+	exit 1
+else
+	echo "c linker command \`$ccld $ccldflags --help', return success"
+fi
+
+if ! $as $asflags --help > /dev/null 2>&1
+then
+	echo "assembler command \`$as $asflags --help', returned error"
+	exit 1
+else
+	echo "assembler command \`$as $asflags --help', return success"
+fi
+
+mkdir -p ./bin
+mkdir -p ./obj
+
+# build makefile header
+echo "building makefile..."
+
+cat <<EOF > ./makefile
+bindir=$bindir
+sbindir=$sbindir
+libdir=$libdir
+srcdir=$srcdir
+incdir=$incdir
+docdir=$docdir
+mandir=$mandir
+
+cc=$cc
+ld=$ld
+ccld=$ccld
+as=$as
+
+cflags=$cflags
+ldflags=$ldflags
+ccldflags=$ccldflags
+asflags=$asflags
+
+ifndef VERBOSE
+.SILENT:
+endif
+
+list:
+	echo "bin dir  | \${bindir}"
+	echo "sbin dir | \${sbindir}"
+	echo "lib dir  | \${libdir}"
+	echo "src dir  | \${srcdir}"
+	echo "inc dir  | \${incdir}"
+	echo "doc dir  | \${docdir}"
+	echo "man dir  | \${mandir}"
+	echo "cc       | \${cc} \${cflags}"
+	echo "ld       | \${ld} \${ldflags}"
+	echo "cc ld    | \${ccld} \${ccldflags}"
+	echo "as       | \${as} \${asflags}"
+
+EOF
+
+cat body.makefile >> makefile
+
+echo "Done"
