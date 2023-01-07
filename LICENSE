@@ -1,0 +1,77 @@
+Mimik License 2023
+
+Copyright (c) 2023 Noah Otto Robert Arcouette All Rights Reserved
+
+Definitions
+===========
+
+"This License" refers to the Mimik License 2023.
+
+"Software" refers to any copyrightable data, files, or associated files, licensed under This License.
+
+"User" refers to any person who obtains This Software or associated files.
+
+To "Modify" the Software means to copy or adapt all or part of the Software in a fashion requiring copyright permission, other than the making of an exact copy. The resulting Software is called a "modified version" of the earlier Software or a Software "based on" the earlier Software.
+
+The "Modified Software" is This Software after someone Modifies it.
+
+To "Sublicense" this Software means to add a new license. This new license must comply with the terms of This License. It may not remove or edit any of the terms of This License, it may only add more terms.
+
+To "Collect" User Information is to save or store any information from the User.
+
+"User Information" is any information specific to the user, including identifying information, system information, and configuration information used by any product on the host operation system.
+
+"Self Replicating" is to create a copy of the Software that will recreate it's self.
+
+"Host Operation System" is the operating system that the User is using.
+
+"Open Source" is to allow access to This Software without payment or special access necessary.
+
+This "Copyright Holder" is the name, or names, in the name field at the top of This License.
+
+"The Date" refers to the year in the year field a the top of This License.
+
+Conditions
+==========
+
+Permission to redistribute, Modify, use, publish, and/or Sublicense, is granted to any person obtaining a copy of this Software, under the following conditions.
+
+1.
+The Software must not be used to collect, distribute, and/or make profit
+from User Information.
+
+2.
+The Modified Software must contain an unedited copy of this exact license.
+
+3.
+The Modified Software must not be change to allow malicious use. The Software can not be Self Replicating, corrupting, and/or alter the regular operation of the Host Operating System.
+
+4.
+This License does not grant permission to use the trade names, trademarks,
+service marks, or product names.
+
+5.
+This License does not provide warranty or liability for the User or This Software. This Software is provided "as is"
+
+6. 
+The Modified Software must comply with the conditions of This License.
+
+7.
+If the Copyright Holder changes the license of the Software you must now comply with the new license, and not This License.
+
+8.
+All rights are reserved to the Copyright Holder of This Software.
+
+9.
+The Modified Software must stay Open Source.
+
+10.
+This License is still valid and must be complied with after The Date specified in This License. The Date is only to tell when This License was created.
+
+11.
+The creator of the Modified Software must not impersonate the original Copyright Holder. The creator of the Modified Software must specify that this is not the original Software.
+
+Citations
+=========
+
+Some parts of This License are from the GPL.
