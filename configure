@@ -1,5 +1,14 @@
 #!/bin/sh
 
+#
+ # Configuration Script For The Mimik Core Utils
+ # 
+ # Copyright (c) 2023 Noah Otto Robert Arcouette All Right Reserved
+ # Mimik License 2023
+ # SoftWare is provided "AS IS"
+ # See MAS=0002 : Mimik License 2023 For More Information
+#
+
 # remove old makefile
 rm -f makefile
 
@@ -188,6 +197,7 @@ fi
 if [ -f "./lng/$lang.h" ]
 then
 	echo "Using language $lang"
+	cp "./lng/$lang.h" ./inc/lang.h
 else
 	echo "Language $lang is not supported"
 	exit 1
@@ -249,8 +259,6 @@ cflags=$cflags
 ldflags=$ldflags
 ccldflags=$ccldflags
 asflags=$asflags
-
-langfile=./lng/$lang.h
 
 ifndef VERBOSE
 .SILENT:

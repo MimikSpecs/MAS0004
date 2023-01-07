@@ -2,3 +2,4 @@ obj/
 bin/
 
 makefile
+inc/lang.h

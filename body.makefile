@@ -27,3 +27,12 @@ clean:
 	rm -f ./bin/*
 	echo "RM    | ./obj/*"
 	rm -f ./obj/*
+
+#
+ # MAke File For The Mimik Core Utils
+ #
+ # Copyright (c) 2023 Noah Otto Robert Arcouette All Right Reserved
+ # Mimik License 2023
+ # SoftWare is provided "AS IS"
+ # See MAS=0002 : Mimik License 2023 For More Information
+#
