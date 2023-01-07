@@ -98,6 +98,11 @@ then
 	as=/bin/as
 fi
 
+if [ -z "$lang" ]
+then
+	lang=en
+fi
+
 # test variables
 
 if [ -d "$prefix" ]
@@ -180,6 +185,14 @@ else
 	mkdir "$mandir"
 fi
 
+if [ -f "./lng/$lang.h" ]
+then
+	echo "Using language $lang"
+else
+	echo "Language $lang is not supported"
+	exit 1
+fi
+
 if ! $ld $ldflags --help > /dev/null 2>&1
 then
 	echo "linker command \`$ld $ldflags --help', returned error"
@@ -236,6 +249,8 @@ cflags=$cflags
 ldflags=$ldflags
 ccldflags=$ccldflags
 asflags=$asflags
+
+langfile=./lng/$lang.h
 
 ifndef VERBOSE
 .SILENT:

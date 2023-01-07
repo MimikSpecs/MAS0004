@@ -2,6 +2,8 @@
 
 Provide the GNU Core Utilities under the Mimik License ( MAS=0002 ) and philosophies.
 
+This follow the POSIX Man Pages for the applications see Man 1P instead of Man 1
+
 # Provided Applications
 
  - [ ] chcon, changes file security context
