@@ -4,7 +4,7 @@
  * Memory usage is restricted to about 272 Bytes with default
  * configuration
  *
- * Copyright (c) 2023 Noah Otto Robert Arcouette All Right Reserved
+ * Copyright (c) 2023 Noah Otto Robert Arcouette All Rights Reserved
  * Mimik License 2023
  * SoftWare is provided "AS IS"
  * See MAS=0002 : Mimik License 2023 For More Information

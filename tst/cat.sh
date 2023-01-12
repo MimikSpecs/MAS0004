@@ -1,5 +1,14 @@
 #!/bin/sh
 
+#
+ # Cat Test implementation for the Mimik Core Utils
+ #
+ # Copyright (c) 2023 Noah Otto Robert Arcouette All Rights Reserved
+ # Mimik License 2023
+ # SoftWare is provided "AS IS"
+ # See MAS=0002 : Mimik License 2023 For More Information
+#
+
 echo "stdin" | ./bin/cat ./tst/text1 - ./tst/text2 > test0.nokeep
 
 if cmp -s ./test0.nokeep ./tst/suc1
