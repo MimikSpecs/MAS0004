@@ -1,18 +1,21 @@
-build: ./bin/cat ./bin/true
+build: ./bin/cat ./bin/true ./bin/false
 
 strip: build
 	strip -s ./bin/cat
 	strip -s ./bin/true
+	strip -s ./bin/false
 
 install: build
 	install -m 0755 ./bin/cat ${bindir}/cat
 	install -m 0775 ./bin/true ${bindir}/true
+	install -m 0775 ./bin/false ${bindir}/false
 
 strip-install: build strip install
 
 uninstall:
 	rm ${bindir}/cat
 	rm ${bindir}/true
+	rm ${bindir}/false
 
 build-tests: build
 	# there are no tests to build
@@ -22,6 +25,8 @@ run-tests: build-tests build
 	sh ./tst/cat.sh
 	echo "SH    | ./tst/true.sh"
 	sh ./tst/true.sh
+	echo "SH    | ./tst/false.sh"
+	sh ./tst/false.sh
 
 test: build-tests run-tests
 
@@ -52,6 +57,14 @@ clean:
 ./obj/true.o: ./src/true.c
 	echo "CC    | ./obj/true.o"
 	${cc} ${cflags} -o ./obj/true.o ./src/true.c
+
+./bin/false: ./obj/false.o
+	echo "CC LD | ./bin/false"
+	${ccld} ${ccldflags} -o ./bin/false ./obj/false.o
+
+./obj/false.o: ./src/false.c
+	echo "CC    | ./obj/false.o"
+	${cc} ${cflags} -o ./obj/false.o ./src/false.c
 
 #
  # Make File For The Mimik Core Utils
