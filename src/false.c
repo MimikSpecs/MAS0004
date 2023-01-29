@@ -1,15 +1,17 @@
-#ifndef __LANGUAGE_EN_H__
-#define __LANGUAGE_EN_H__
-
 /*
- * English language pack for the Mimik Core Utils
- * 
+ * False program implementation for the Mimik Core Utils
+ *
  * Copyright (c) 2023 Noah Otto Robert Arcouette All Rights Reserved
  * Mimik License 2023
  * SoftWare is provided "AS IS"
  * See MAS=0002 : Mimik License 2023 For More Information
 */
 
-static const char *CAT_ERROR_0 = "File does not exist.";
+#include <stdlib.h>
 
-#endif
+int
+main (void)
+{
+	exit(1);
+	return 1; // if exit does not work, then resort to the C Standard Library	
+}

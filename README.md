@@ -77,7 +77,7 @@ This follow the POSIX Man Pages for the applications see Man 1P instead of Man 1
  - [ ] env, displays and modifies environment variables
  - [ ] expr, evaluates expressions
  - [ ] factor, factors numbers
- - [ ] false, does nothing, but exits unsuccessfully
+ - [x] false, does nothing, but exits unsuccessfully
  - [ ] groups, prints the groups of which the user is a member
  - [ ] hostid, prints the numeric identifier for the current host
  - [ ] id, prints real of effective UID and GID
@@ -101,7 +101,7 @@ This follow the POSIX Man Pages for the applications see Man 1P instead of Man 1
  - [ ] tee, sends output to multiple files
  - [ ] test, evaluates an expression
  - [ ] timeout, run a command with a time limit
- - [ ] true, does nothing, but exits successfully
+ - [x] true, does nothing, but exits successfully
  - [ ] tty, prints terminal name
  - [ ] uname, prints system information
  - [ ] unlink, remove the specified file using the unlink function
