@@ -60,12 +60,9 @@ main (argc, argv)
 
         if (fd < 0)
         {
-            fprintf(stderr, progName);
-            fprintf(stderr, ": `");
-            fprintf(stderr, argv[i]);
-            fprintf(stderr, "' ");
-            fprintf(stderr, CAT_ERROR_0);
-            fprintf(stderr, "\n");
+            fprintf(stderr, "%s: `%s' " CAT_ERROR_0 "\n",
+                progName,
+                argv[i]);
             exit(1);
         }
 
